@@ -1,6 +1,9 @@
 body{
+background-color: #f2f2f2;
 font-size: 15px;
 font-family: 'Lexend Deca', sans-serif;
+justify-content:center;
+align-items: center;
 /*
 font-weight: normal;
 */
@@ -34,6 +37,7 @@ img {
   padding-left: 40px;
 }
 
+/*******************ORIGINAL CODE***************
 .wrapper {
 width: 930px;
 height: 500px;
@@ -47,14 +51,8 @@ margin: 200px 200px 300px 200px;
   width: 33.3%;
   position: absolute;
   display: inline-block;
-  /*
-  margin-top: 200px;
-  margin-bottom: 300px;
-  margin-left: 200px;
-*/
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-
 }
 
 .suvs {
@@ -64,12 +62,6 @@ margin: 200px 200px 300px 200px;
   position: absolute;
   left: 33.3%;
   display: inline-block;
-  /*
-  left: 550px;
-  margin-top: 200px;
-  margin-bottom: 300px;
-  padding: 0;
-  */
 }
 
 .luxury {
@@ -79,16 +71,10 @@ margin: 200px 200px 300px 200px;
   display: inline-block;
   height: 100%;
   width: 33.3%;
-  /*
-  margin-top: 200px;
-  margin-bottom: 300px;
-  left: 900px;
-*/
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-
 }
-
+***********************************************/
 
 
 
@@ -98,13 +84,14 @@ margin: 200px 200px 300px 200px;
   -webkit-border-radius: 25;
   -moz-border-radius: 25;
   border-radius: 25px;
+  border: solid #f2f2f2 2px;
   font-family: 'Lexend Deca', sans-serif;
   color: #e38826;
   font-size: 15px;
   background: #f2f2f2;
   padding: 15px 25px 15px 25px;
   text-decoration: none;
-  position: absolute;
+  position: relative;
   left: 40px;
 }
 
@@ -112,7 +99,6 @@ margin: 200px 200px 300px 200px;
   background: #e38826;
   text-decoration: none;
   color:#f2f2f2;
-  border: solid #f2f2f2 2px;
 }
 
 
@@ -120,13 +106,14 @@ margin: 200px 200px 300px 200px;
   -webkit-border-radius: 25;
   -moz-border-radius: 25;
   border-radius: 25px;
+  border: solid #f2f2f2 2px;
   font-family: 'Lexend Deca', sans-serif;
   color: #006970;
   font-size: 15px;
   background: #f2f2f2;
   padding: 15px 25px 15px 25px;
   text-decoration: none;
-  position: absolute;
+  position: relative;
   left: 40px;
 }
 
@@ -134,7 +121,6 @@ margin: 200px 200px 300px 200px;
   background: #006970;
   text-decoration: none;
   color:#f2f2f2;
-  border: solid #f2f2f2 2px;
 }
 
 
@@ -143,13 +129,14 @@ margin: 200px 200px 300px 200px;
   -webkit-border-radius: 25;
   -moz-border-radius: 25;
   border-radius: 25px;
+  border: solid #f2f2f2 2px;
   font-family: 'Lexend Deca', sans-serif;
   color: #004241;
   font-size: 15px;
   background: #f2f2f2;
   padding: 15px 25px 15px 25px;
   text-decoration: none;
-  position: absolute;
+  position: relative;
   left: 40px;
 }
 
@@ -157,12 +144,57 @@ margin: 200px 200px 300px 200px;
   background: #004241;
   text-decoration: none;
   color:#f2f2f2;
-  border: solid #f2f2f2 2px;
 }
 
 .attribution {
-  position: absolute;
+  /*
+  position: fixed;
   bottom: 20px;
   text-align: center;
-  left: 530px;
+  left: auto;
+  */
+  position: fixed;
+  left: 0;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+
+}
+
+
+/*****************FLEX BOX TRIAL*******************/
+.wrapper {
+width: 930px;
+height: 500px;
+display: inline-flex;
+flex-direction: row;
+margin: auto;
+position: absolute;
+top: 25%;
+left: 25%;
+}
+
+.sedans {
+	background-color: #e38826;
+  height: 100%;
+  width: 33.3%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  order: 1;
+}
+
+.suvs {
+  background-color: 	#006970;
+  height: 100%;
+  width: 33.4%;
+  order: 2;
+}
+
+.luxury {
+  background-color: #004241;
+  height: 100%;
+  width: 33.3%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  order: 3;
 }
